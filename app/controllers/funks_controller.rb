@@ -1,0 +1,2 @@
+class FunksController < ApplicationController
+end

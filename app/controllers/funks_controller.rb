@@ -4,7 +4,7 @@ class FunksController < ApplicationController
     @funks = Funk.all
   end
 
-  def view
+  def show
     @funk = Funk.find(params[:id])
   end
 

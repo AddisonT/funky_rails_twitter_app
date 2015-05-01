@@ -1,1 +1,6 @@
-new.html.erb
+<%= form_for @funk do |f|  %>
+
+<%= f.label :content %><br/>
+<%= f.text_field :content %>
+<%= f.submit "Funk your life"  %>
+<% end  %> 

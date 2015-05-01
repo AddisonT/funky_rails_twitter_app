@@ -1,0 +1,10 @@
+<div>
+  <h2><%= @user.handle %></h2> 
+</div>
+
+<% @funks.each do |x| %>
+  <div style='margin:10px'>
+    <%= x.content %><br/>  
+  Created at: <%= x.created_at  %>
+  </div>
+<% end %>

@@ -1,23 +1,28 @@
 class FunksController < ApplicationController
 
   def index
-    @funks = Funk.all
+    @user = User.find(params[:user_id])
+    @funks = @user.funks
   end
 
   def show
+    @user = User.find(params[:user_id])
     @funk = Funk.find(params[:id])
   end
 
   def new
+    @user = User.find(params[:user_id])
     @funk = Funk.new
   end
 
   def create
-    @funk = Funk.create(funk_params)
-    redirect_to funks_path
+    @user = User.find(params[:user_id])
+    @funk = @user.funks.create(funk_params)
+    redirect_to user_funks_path
   end
 
   def destroy
+    @user = User.find(params[:user_id])
     Funk.find(params[:id]).destroy
   end
 
